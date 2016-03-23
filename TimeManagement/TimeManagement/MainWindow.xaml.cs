@@ -1,18 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace TimeManagement
@@ -24,8 +11,6 @@ namespace TimeManagement
     {
         DispatcherTimer timer = new DispatcherTimer();
         TimeSpan timeRemaining = new TimeSpan();
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        public static extern bool SwitchToThisWindow(IntPtr hWnd, bool fAltTab);
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +27,6 @@ namespace TimeManagement
             {
                 MessageBox.Show("计时结束", "提示");
                 timer.Stop();
-                SwitchToThisWindow(this.Handle, true);
             }
         }
 
