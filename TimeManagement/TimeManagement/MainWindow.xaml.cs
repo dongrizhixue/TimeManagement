@@ -53,12 +53,12 @@ namespace TimeManagement
                 }
                 else
                 {
-                    lblTimeRemaining.Content = "倒计时不能小于零。";
+                    MessageBox.Show("倒计时不能小于零。","提示");
                 }
             }
             else
             {
-                lblTimeRemaining.Content = "时间转换错误，请填写数字。";
+                MessageBox.Show("时间转换错误，请填写数字。", "提示");
             }
 
         }
