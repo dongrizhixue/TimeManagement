@@ -16,7 +16,7 @@ namespace TimeManagement
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            TestWebAPI startUrl = new TestWebAPI();
+            Form1 startUrl = new Form1();
             startUrl.Show();
         }
     }

@@ -23,9 +23,9 @@ namespace TimeManagement
             tr.ID = 1;
             tr.TearcharName = "郭老师";
             tr.TearcharAge = 28;
-            richTextBox1.Text = tr.ToString();
         }
     }
+    [Serializable()]
     public class TearcherRoom
     {
         public int ID { set; get; }
